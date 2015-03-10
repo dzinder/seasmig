@@ -95,12 +95,7 @@ public class TreesLikelihoodVariable extends Variable {
 					Model model = this.getModel();		 	
 					// "tree STATE_50850000 [&lnP=-34291.617355973016,posterior=-34291.617355973016] = [&R]"
 					String header = "tree STATE_" + getChain().getIterationCount() + " [&lnP=" + (model.getLogPrior()+trees[i].logLikelihood()) + "]" +  " = [&R] ";			
-					try {
-						returnValue[i]=(header + (trees[i].newickSM(config.maxSMBranchRetries)));
-					} catch (Exception e) {
-						System.err.println("failed to map tree #"+i);
-						System.exit(-1);
-					}
+					returnValue[i]=(header + (trees[i].newickSM(config.maxSMBranchRetries)));
 				}				
 				outputObject.smTrees=returnValue;
 			}		
@@ -169,12 +164,7 @@ public class TreesLikelihoodVariable extends Variable {
 					Model model = this.getModel();		 	
 					// "tree STATE_50850000 [&lnP=-34291.617355973016,posterior=-34291.617355973016] = [&R]"
 					String header = "tree STATE_" + getChain().getIterationCount() + " [&lnP=" + (model.getLogPrior()+trees[i].logLikelihood()) + "]" +  " = [&R] ";			
-					try {
-						returnValue[i]=(header + (trees[i].newickSM(config.maxSMBranchRetries)));
-					} catch (Exception e) {
-						System.err.println("failed to map tree #"+i);
-						System.exit(-1);
-					}
+					returnValue[i]=(header + (trees[i].newickSM(config.maxSMBranchRetries)));
 				}				
 				outputObject.smTrees=returnValue;
 			}		

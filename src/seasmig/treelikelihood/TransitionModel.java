@@ -29,6 +29,6 @@ public interface TransitionModel extends Serializable {
 	public String getModelName();
 	public DoubleMatrix1D probability(int from_trait, double from_time, double to_time);
 	public DoubleMatrix1D rootfreq(double when);
-	public Transition nextEvent(double time, int trait) throws Exception;
+	public Transition nextEvent(double time, int trait);
 	
 }

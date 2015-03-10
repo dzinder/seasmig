@@ -184,7 +184,7 @@ public class ConstantTransitionBaseModel implements TransitionModel {
 		return basefreq;
 	}
 
-	public Transition nextEvent(double from_time, int from) throws Exception {
+	public Transition nextEvent(double from_time, int from) {
 		double lambda = -Q[from][from];
 		double time = cern.jet.random.Exponential.staticNextDouble(lambda); // TODO: ??????????
 		// mean of this exponential is 1/lambda, higher the rate, the shorter the time interval --> nextDouble(lambda) is the correct direction.
@@ -206,12 +206,12 @@ public class ConstantTransitionBaseModel implements TransitionModel {
 		if (loc>=dimension) {
 			System.err.println("error in stochastic mapping nextEvent, dimension="+dimension+" loc="+loc+" from="+from);
 			System.err.println(Util.parse(Q));
-			throw(new Exception("stochastic mapping error"));
+			System.exit(-1);
 		}
 		if (loc==from) {
 			System.err.println("error in stochastic mapping nextEvent, dimension="+dimension+" loc="+loc+" from="+from);
 			System.err.println(Util.parse(Q));
-			throw(new Exception("stochastic mapping error"));		
+			System.exit(-1);		
 		}
 		return new Transition(time+from_time, loc);
 	}

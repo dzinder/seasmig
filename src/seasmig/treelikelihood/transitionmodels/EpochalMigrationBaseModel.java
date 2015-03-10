@@ -176,7 +176,7 @@ public class EpochalMigrationBaseModel implements TransitionModel {
 		return DoubleFactory1D.dense.make(returnValue);
 	}
 
-	public Transition nextEvent(double time, int from) throws Exception {
+	public Transition nextEvent(double time, int from) {
 		// TODO: check this...
 		Transition nextEvent = null;
 		boolean done = false;
