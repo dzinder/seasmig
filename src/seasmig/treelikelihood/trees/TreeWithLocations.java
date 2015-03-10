@@ -606,7 +606,7 @@ public class TreeWithLocations implements LikelihoodTree {
 		return returnValue;
 	}
 
-	public String newickSM(int maxBranchRetries) {
+	public String newickSM(int maxBranchRetries) throws Exception {
 		fillConditionalLikelihoods();
 		sortChildrenByDescendants();
 		asr(); // Ancestral state reconstruction
@@ -640,7 +640,7 @@ public class TreeWithLocations implements LikelihoodTree {
 		return returnValue;
 	}
 
-	private void stochasticMapping(int maxBranchRetries) {
+	private void stochasticMapping(int maxBranchRetries) throws Exception {
 		// TODO: test
 		// TODO: cite		
 		//System.err.println(" Q="+migrationModel.parse());		

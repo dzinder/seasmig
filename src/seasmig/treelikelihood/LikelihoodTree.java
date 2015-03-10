@@ -25,7 +25,7 @@ public interface LikelihoodTree extends Serializable {
 	
 	// Stochastic Mapping & State Reconstruction of Migration
 	public String newickASR();
-	public String newickSM(int maxBranchRetries);
+	public String newickSM(int maxBranchRetries) throws Exception;
 	public String smTransitions();	
 	public String smTipDwellings();
 	public String smLineages();
