@@ -129,7 +129,7 @@ public class SimpleAttributeLoader implements AttributeLoader{
 				System.err.println("Failed to parse model on line: "+i+" of "+filename);				
 			}
 		}
-		
+		System.out.println("read "+matrixLines.size()+" lines from "+filename);
 		migrationModelReader.close();
 		
 		//System.err.println();		
@@ -142,7 +142,13 @@ public class SimpleAttributeLoader implements AttributeLoader{
 			for (int j=0;j<config.numLocations;j++) {
 				Q[j]=new double[config.numLocations];
 				for (int k=0;k<config.numLocations;k++) {
-					Q[j][k]=Double.parseDouble(splitString[j*config.numLocations+k+1]);										
+					if(splitString.length>(j*config.numLocations+k+1)) {
+						Q[j][k]=Double.parseDouble(splitString[j*config.numLocations+k+1]);
+					}
+					else {
+						System.err.println("failed to sub-parse migration model on line "+i+" from"+filename);
+						System.exit(-1);
+					}
 				}
 			}
 			//System.err.println("parsing migration model from iteration "+splitString[0]);

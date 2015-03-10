@@ -177,7 +177,7 @@ public class DataFromFiles implements Data
 			HashMap<String,TransitionModel> codonModelMap = (HashMap<String,TransitionModel>) attributes.get("codonModels");		
 
 			numLocations = (Integer) attributes.get("numLocations");
-			System.out.println("loaded "+locationMap.size()+" taxon traits"+" from "+locationFilename);	
+			System.out.println("\nloaded "+locationMap.size()+" taxon traits"+" from "+locationFilename);	
 			Integer seqLength = (Integer) attributes.get("seqLength");
 			if (seqLength==null) 
 				seqLength=0;

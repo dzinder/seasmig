@@ -11,6 +11,7 @@ import seasmig.treelikelihood.matrixexp.HKY85MatrixExp;
 import seasmig.treelikelihood.matrixexp.JC69MatrixExp;
 import seasmig.treelikelihood.matrixexp.CachedMatrixExponentiator;
 import seasmig.treelikelihood.matrixexp.Matlab7MatrixExp;
+import seasmig.util.Util;
 
 @SuppressWarnings("serial")
 public class ConstantTransitionBaseModel implements TransitionModel {
@@ -204,11 +205,13 @@ public class ConstantTransitionBaseModel implements TransitionModel {
 		// TODO: check this
 		if (loc>=dimension) {
 			System.err.println("error in stochastic mapping nextEvent, dimension="+dimension+" loc="+loc+" from="+from);
+			System.err.println(Util.parse(Q));
 			System.exit(-1);
 		}
 		if (loc==from) {
 			System.err.println("error in stochastic mapping nextEvent, dimension="+dimension+" loc="+loc+" from="+from);
-			System.exit(-1);
+			System.err.println(Util.parse(Q));
+			System.exit(-1);			
 		}
 		return new Transition(time+from_time, loc);
 	}
