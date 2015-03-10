@@ -141,15 +141,19 @@ public class SimpleAttributeLoader implements AttributeLoader{
 			double[][] Q = new double[config.numLocations][];
 			for (int j=0;j<config.numLocations;j++) {
 				Q[j]=new double[config.numLocations];
+				double rowsum=0;
 				for (int k=0;k<config.numLocations;k++) {
+					if(j==k) continue;
 					if(splitString.length>(j*config.numLocations+k+1)) {
 						Q[j][k]=Double.parseDouble(splitString[j*config.numLocations+k+1]);
+						rowsum+=Q[j][k];
 					}
 					else {
 						System.err.println("failed to sub-parse migration model on line "+i+" from"+filename);
 						System.exit(-1);
 					}
 				}
+				Q[j][j]=-rowsum;
 			}
 			//System.err.println("parsing migration model from iteration "+splitString[0]);
 			//System.err.println(Util.parse(Q));
