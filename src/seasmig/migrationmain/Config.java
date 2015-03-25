@@ -169,6 +169,7 @@ public class Config implements Serializable
 	public int numTreesFromTail = 50; // at most number of trees to read from tree file's tail
 	public int numLocations = 7; // needs to be specified if locations are loaded from trees....
 	public boolean sampleTreesSequentially = true;
+	public int startFromTreeIndex = 1;
 	
 	// ANCESTRAL STATE RECONSTRUCTIOn
 	public StateReconstructionAndTreeOutput stateReconstructionAndTreeOutput = StateReconstructionAndTreeOutput.SEQ_STOCHASTIC_MAPPING ;
@@ -189,6 +190,8 @@ public class Config implements Serializable
 
 	public String[] migrationModelFilenames = {"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\migration_models.txt"};
 	public String[] codonModelFilenames = {"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\codon_models.txt"};
+
+	
 
 
 	// OUTPUT CONFIG TO FILE
