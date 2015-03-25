@@ -93,7 +93,7 @@ public class HKY_3CP_ConstantMigrationRates extends MigrationModel {
 			treeIndices = new IntVariable[trees.size()];
 			for (int i=0;i<trees.size();i++) {
 				if (nTrees[i]>1) {
-					treeIndices[i] = new IntVariable(this, "treeIndex."+i,config.startFromTreeIndex, new UniformIntIntegrator(this, 0, nTrees[i]-1));
+					treeIndices[i] = new IntVariable(this, "treeIndex."+i, new UniformIntIntegrator(this, 0, nTrees[i]-1));
 				}
 			}
 		}
