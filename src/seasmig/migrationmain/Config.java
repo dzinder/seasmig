@@ -91,12 +91,12 @@ public class Config implements Serializable
 	public Long randomSeed;
 	
 	// IO RELATED PARAMETERS
-	public String sampleFilename = "F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\samples.jsons";
-	public String swapStatsFilename = "F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\swap_stats.txt";
+	public String sampleFilename = "samples.jsons";
+	public String swapStatsFilename = "swap_stats.txt";
 	public Level logLevel = Level.INFO;
-	public String checkpointFilename = "F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\checkpoint.bin";
-	public String priorLikelihoodFilename = "F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\prior_likelihood.txt";
-	public String mlFilename = "F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\ml.txt";
+	public String checkpointFilename = "checkpoint.bin";
+	public String priorLikelihoodFilename = "prior_likelihood.txt";
+	public String mlFilename = "ml.txt";
 	public long thin = 20;
 	
 	// MCMC RELATED PARAMETERS
@@ -163,8 +163,8 @@ public class Config implements Serializable
 	public double seqStochasticMappingStartTime = 1970; 
 	
 	// MODEL DATA RELATED PARAMETERS
-	public String[] locationFilenames ={"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\accession_locid.txt"}; // null if locations are loaded from tree
-	public String[] treeFilenames = {"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\newTrait_tree_with_trait.trees"}; // null for test generated data 
+	public String[] locationFilenames ={"accession_locid.txt"}; // null if locations are loaded from tree
+	public String[] treeFilenames = {"newTrait_tree_with_trait.trees"}; // null for test generated data 
 	public double[] treeWeights = {1.0};
 	public int numTreesFromTail = 50; // at most number of trees to read from tree file's tail
 	public int numLocations = 7; // needs to be specified if locations are loaded from trees....
@@ -181,14 +181,14 @@ public class Config implements Serializable
 	public double timeToDesignateTrunk = 4.0; // time back from present day tip ancestry designated as trunk 
 	public int maxSMBranchRetries = 200000; // maximum number of retries for stochastically mapping a single branch
 
-	public String[] alignmentFilenames = {"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\all_epitopes.txt"};
+	public String[] alignmentFilenames = {"all_epitopes.txt"};
 
 	public SeqModelType seqModelType = SeqModelType.HKY_3CP_AS_INPUT;
 
 	public double verificationTolerance = 3; // TODO: check why verification fails ?ed? with seq data, and is it just a convergence things.
 
-	public String[] migrationModelFilenames = {"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\migration_models.txt"};
-	public String[] codonModelFilenames = {"F:\\Daniel\\Dropbox\\SharedFolderBobDanielRV\\who_and_us\\for_testing_seasmig_mapping_without_mcmc\\codon_models.txt"};
+	public String[] migrationModelFilenames = {"migration_models.txt"};
+	public String[] codonModelFilenames = {"codon_models.txt"};
 
 
 	// OUTPUT CONFIG TO FILE
