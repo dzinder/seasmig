@@ -10,9 +10,5 @@
 Additional details and run configurations will be included with a formal publication of:
 * Early Signs of Post-vaccination Change in US Rotavirus Population (in preperation) 
 
-**Requires:**
-Java JRE 1.6 and newer
 
-**For running type:**
-java -jar seasmig.jar
 
