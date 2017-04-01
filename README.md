@@ -9,7 +9,7 @@
 
 See release details for configuration and running. 
 
-Additional details and run configurations will be included with a formal publication of:
+Future updates expected with a formal publication of:
 * Early Signs of Post-vaccination Change in US Rotavirus Population (in preperation) 
 
 
